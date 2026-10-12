@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مركز ليا للتجميل والجلدية والليزر | د. خزامى احمد حسن</title>
+  
+  <!-- خط Readex Pro وأيقونات Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --bg: #2d1842;
+      --card-bg: #3c2256;
+      --card-border: rgba(235, 203, 138, 0.3);
+      --accent-gold: #f3cf85;
+      --accent-rose: #f095af;
+      --gold-gradient: linear-gradient(135deg, #f5d48f 0%, #fff1cc 50%, #d4a359 100%);
+      --btn-whatsapp: #25d366;
+      --btn-maps: #1a73e8;
+      --text: #ffffff;
+      --muted: #ded1eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Readex Pro', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 90px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px 16px;
+    }
+
+    /* Hero Header */
+    .hero-card {
+      background: linear-gradient(180deg, #4c286e 0%, #361b52 100%);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 26px 18px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      margin-bottom: 22px;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(243, 207, 133, 0.15);
+      color: var(--accent-gold);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      border: 1px solid rgba(243, 207, 133, 0.35);
+    }
+
+    .clinic-title {
+      font-size: 1.85rem;
+      font-weight: 700;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+    }
+
+    .doctor-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .doctor-spec {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    /* Action Buttons */
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-wa {
+      background-color: var(--btn-whatsapp);
+      color: #fff;
+    }
+
+    .btn-gold {
+      background: var(--gold-gradient);
+      color: #3b2203;
+    }
+
+    .btn-maps {
+      background: var(--btn-maps);
+      color: #fff;
+      width: 100%;
+    }
+
+    /* Section Styles */
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin: 28px 0 14px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(243, 207, 133, 0.2);
+    }
+
+    .service-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .card-header h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sub-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .price-list {
+      list-style: none;
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+      font-size: 0.92rem;
+    }
+
+    .price-item:last-child {
+      border-bottom: none;
+    }
+
+    .price-tag {
+      font-weight: 700;
+      color: #2b1704;
+      background: var(--gold-gradient);
+      padding: 2px 10px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      white-space: nowrap;
+    }
+
+    /* Laser Grid */
+    .laser-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .laser-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 10px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.88rem;
+    }
+
+    /* Working Hours Table */
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    .hours-table tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hours-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .hours-table td {
+      padding: 8px 4px;
+    }
+
+    .day-name {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .day-time {
+      text-align: left;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .closed-tag {
+      color: #ff7b7b;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    /* ==========================================
+       معرض صور العيادة (Clinic Gallery)
+       ========================================== */
+    .clinic-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      aspect-ratio: 4 / 3;
+      background: rgba(0, 0, 0, 0.25);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      cursor: pointer;
+    }
+
+    .gallery-item.featured {
+      grid-column: span 2;
+      aspect-ratio: 16 / 9;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    /* أيقونة تكبير تظهر بلطف فوق الصورة */
+    .gallery-item::after {
+      content: '\f00e';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: var(--accent-gold);
+      background: rgba(45, 24, 66, 0.7);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      opacity: 0.85;
+      pointer-events: none;
+      transition: all 0.2s ease;
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+      transform: scale(1.1);
+      background: rgba(45, 24, 66, 0.9);
+    }
+
+    /* ==========================================
+       نافذة عرض الصورة المكبرة (Lightbox Modal)
+       ========================================== */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(20, 10, 30, 0.94);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-content {
+      max-width: 95%;
+      max-height: 85vh;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+      border: 1px solid var(--accent-gold);
+      object-fit: contain;
+      transform: scale(0.92);
+      transition: transform 0.25s ease;
+    }
+
+    .lightbox-modal.active .lightbox-content {
+      transform: scale(1);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      font-size: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lightbox-close:hover,
+    .lightbox-close:active {
+      background: var(--accent-gold);
+      color: #2d1842;
+      transform: rotate(90deg);
+    }
+
+    /* Footer Info */
+    .info-footer {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .info-item i {
+      color: var(--accent-gold);
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-wa-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25d366;
+      color: #ffffff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
+      z-index: 9999;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .floating-wa-btn:active {
+      transform: scale(0.92);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- زر واتساب الثابت على الجانب -->
+  <a href="https://api.whatsapp.com/send?phone=963937395616" class="floating-wa-btn" target="_blank" title="تواصل عبر واتساب">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- نافذة تكبير الصورة (Lightbox Modal) -->
+  <div id="imageLightbox" class="lightbox-modal">
+    <button class="lightbox-close" id="closeLightbox" aria-label="إغلاق">&times;</button>
+    <img id="lightboxImg" class="lightbox-content" src="" alt="عرض مكبر">
+  </div>
+
+  <div class="container">
+
+    <!-- الواجهة الرئيسية -->
+    <header class="hero-card">
+      <div class="brand-badge"><i class="fa-solid fa-crown"></i> Léa Beauty Clinic</div>
+      <h1 class="clinic-title">مركز ليا</h1>
+      <h2 class="doctor-name">الدكتورة خزامى احمد حسن</h2>
+      <p class="doctor-spec">اختصاصية بـ الأمراض الجلدية والتجميل<br>بورد سوري بـ أمراض الجلد والشعر والأظافر من مشافي دمشق</p>
+      
+      <!-- أزرار الواتساب بالأعلى -->
+      <div class="cta-grid">
+        <a href="https://api.whatsapp.com/send?phone=963937395616" class="btn btn-wa" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> واتساب الحجز
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=963968982238" class="btn btn-gold" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> واتساب العيادة
+        </a>
+      </div>
+    </header>
+
+    <!-- بطاقة أوقات الدوام -->
+    <div class="service-card">
+      <div class="card-header">
+        <h4><i class="fa-regular fa-clock" style="color: var(--accent-gold);"></i> أوقات الدوام</h4>
+        <span style="font-size: 0.8rem; background: rgba(37,211,102,0.15); color: #4ade80; padding: 3px 8px; border-radius: 6px; font-weight: 600;">
+          <i class="fa-solid fa-circle" style="font-size: 8px;"></i> متاح للحجز
+        </span>
+      </div>
+      <table class="hours-table">
+        <tr>
+          <td class="day-name">السبت - الخميس</td>
+          <td class="day-time">9:30 صباحاً – 4:00 عصراً</td>
+        </tr>
+        <tr>
+          <td class="day-name">الجمعة</td>
+          <td class="closed-tag">عطلة أسبوعية (مغلق)</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- ==========================================
+         قسم معرض صور العيادة والأجهزة
+         ========================================== -->
+    <h3 class="section-title"><i class="fa-solid fa-images"></i> صور العيادة والتجهيزات</h3>
+    <div class="service-card">
+      <div class="sub-desc">اضغط على أي صورة لتكبيرها واستعراض تفاصيل المركز</div>
+      <div class="clinic-gallery">
+        <!-- الصورة الأولى (مميزة وواسعة) -->
+        <div class="gallery-item featured">
+          <img src="https://i.postimg.cc/YqVkjxBJ/IMG-20261012-WA0025.jpg" alt="مركز ليا للتجميل" loading="lazy">
+        </div>
+        <!-- الصور التالية -->
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/5NG1jmWD/IMG-20261012-WA0026.jpg" alt="تجهيزات العيادة" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/SN5qjGbB/IMG-20261012-WA0027.jpg" alt="غرفة العناية والفحص" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/fTFZkvQP/IMG-20261012-WA0028.jpg" alt="أجهزة العيادة الحديثة" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/tCfy7zHC/IMG-20261012-WA0029.jpg" alt="أجهزة التجميل والعناية" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/T3DxbWRT/IMG-20261012-WA0030.jpg" alt="جلسات وأجهزة المركز" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/fR9sd0wb/IMG-20261012-WA0031.jpg" alt="غرفة المعاينة والاستشارة" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         قسم الحقونات التجميلية
+         ========================================== -->
+    <h3 class="section-title"><i class="fa-solid fa-syringe"></i> قسم الحقونات التجميلية</h3>
+
+    <!-- 1. فيلر -->
+    <div class="service-card">
+      <div class="card-header">
+        <h4><i class="fa-solid fa-wand-magic-sparkles" style="color: var(--accent-rose);"></i> فيلر</h4>
+      </div>
+      <div class="sub-desc">ملء الخطوط واستعادة الحجم: فيلر شفاه، خطوط الضحك، خدود، دقن، تكساس</div>
+      <ul class="price-list">
+        <li class="price-item"><span>كوري</span><span class="price-tag">$60</span></li>
+        <li class="price-item"><span>الماني</span><span class="price-tag">$90</span></li>
+      </ul>
+    </div>
+
+    <!-- 2. بوتوكس -->
+    <div class="service-card">
+      <div class="card-header">
+        <h4><i class="fa-solid fa-sparkles" style="color: var(--accent-rose);"></i> بوتوكس</h4>
+      </div>
+      <div class="sub-desc">مظهر شبابي بدون التجاعيد</div>
+      <ul class="price-list">
+        <li class="price-item"><span>بوتوكس وجه</span><span class="price-tag">$40</span></li>
+        <li class="price-item"><span>بوتوكس تعرق</span><span class="price-tag">$60</span></li>
+      </ul>
+    </div>
+
+    <!-- 3. باقة VIP -->
+    <div class="service-card" style="background: linear-gradient(145deg, #4d2572 0%, #351a50 100%); border-color: rgba(243, 207, 133, 0.45);">
+      <div class="card-header">
+        <h4><i class="fa-solid fa-crown" style="color: var(--accent-gold);"></i> VIP باقة</h4>
+      </div>
+      <ul class="price-list">
+        <li class="price-item"><span>بروفايلو</span><span class="price-tag">$190</span></li>
+        <li class="price-item"><span>جاليبرو «حول العين»</span><span class="price-tag">$160</span></li>
+        <li class="price-item"><span>جاليبرو «سوبر هايدرو»</span><span class="price-tag">$170</span></li>
+        <li class="price-item"><span>اكسوزوم «شعر او وجه»</span><span class="price-tag">$250</span></li>
+        <li class="price-item"><span>كونتور وجه</span><span class="price-tag">$250</span></li>
+        <li class="price-item"><span>ابرة ليا الملكية</span><span class="price-tag">$250</span></li>
+        <li class="price-item"><span>ريتش</span><span class="price-tag">$500</span></li>
+        <li class="price-item"><span>RRS</span><span class="price-tag">$250</span></li>
+        <li class="price-item"><span>ايجال</span><span class="price-tag">$105</span></li>
+        <li class="price-item"><span>كيارا</span><span class="price-tag">$60</span></li>
+        <li class="price-item"><span>هيارون</span><span class="price-tag">$30</span></li>
+        <li class="price-item"><span>ابرة ياقوت</span><span class="price-tag">$90</span></li>
+        <li class="price-item"><span>ابرة عنبر</span><span class="price-tag">$70</span></li>
+      </ul>
+    </div>
+
+    <!-- 4. ميزوثيرابي -->
+    <div class="service-card">
+      <div class="card-header">
+        <h4><i class="fa-solid fa-spa" style="color: var(--accent-rose);"></i> ميزوثيرابي</h4>
+      </div>
+      <div class="sub-desc">ترطيب وتغذية البشرة</div>
+      <ul class="price-list">
+        <li class="price-item"><span>ميزو حول العين</span><span class="price-tag">$20</span></li>
+        <li class="price-item"><span>ميزو شعر</span><span class="price-tag">$20</span></li>
+        <li class="price-item"><span>ميزو اذابة شحوم</span><span class="price-tag">$40</span></li>
+        <li class="price-item"><span>ميزو (تفتيح مناطق حساسة)</span><span class="price-tag">$40</span></li>
+        <li class="price-item"><span>ليمون باتل</span><span class="price-tag">$60</span></li>
+      </ul>
+    </div>
+
+    <!-- 5. ديرمابين + ميزو -->
+    <div class="service-card">
+      <div class="card-header">
+        <h4><i class="fa-solid fa-wand-magic" style="color: var(--accent-gold);"></i> ديرمابين + ميزو</h4>
+        <span class="price-tag">$20</span>
+      </div>
+      <div class="sub-desc" style="margin-bottom: 0; color: #fff;">
+        «تفتيح-نضارة-تبييض ـ توريد - تصبغات مناطق حساسة»
+      </div>
+    </div>
+
+    <!-- ==========================================
+         باقي أقسام البروشور
+         ========================================== -->
+
+    <!-- الباكجات -->
+    <h3 class="section-title"><i class="fa-solid fa-gift"></i> الباكجات</h3>
+    <div class="service-card">
+      <ul class="price-list">
+        <li class="price-item"><span>باكج النضارة</span><span class="price-tag">$25</span></li>
+        <li class="price-item"><span>باكج علاج حب الشباب</span><span class="price-tag">$25</span></li>
+        <li class="price-item"><span>باكج علاج الكلف والتصبغات</span><span class="price-tag">$25</span></li>
+        <li class="price-item"><span>باكج العناية بالشعر</span><span class="price-tag">$25</span></li>
+      </ul>
+    </div>
+
+    <!-- هيدرافيشيال -->
+    <h3 class="section-title"><i class="fa-solid fa-feather"></i> هيدرافيشيال</h3>
+    <div class="service-card">
+      <div class="sub-desc">تنظيف عميق لبشرة مشرقة</div>
+      <ul class="price-list">
+        <li class="price-item"><span>تنظيف بشرة عميق</span><span class="price-tag">$15</span></li>
+        <li class="price-item"><span>تنظيف بشرة مع ماسك</span><span class="price-tag">$20</span></li>
+        <li class="price-item"><span>الجلسة الملكية</span><span class="price-tag">$40</span></li>
+      </ul>
+    </div>
+
+    <!-- فراكشنال ليزر -->
+    <h3 class="section-title"><i class="fa-solid fa-microchip"></i> فراكشنال ليزر</h3>
+    <div class="service-card">
+      <div class="sub-desc">وداعاً للتجاعيد مرحباً بالشباب</div>
+      <ul class="price-list">
+        <li class="price-item"><span>إزالة الكلف والتصبغات</span><span class="price-tag">$25</span></li>
+        <li class="price-item"><span>إزالة ندبة قيصرية</span><span class="price-tag">$25</span></li>
+        <li class="price-item"><span>إزالة ندبات حب الشباب</span><span class="price-tag">$25</span></li>
+        <li class="price-item"><span>تضييق مهبلي</span><span class="price-tag">$40</span></li>
+      </ul>
+    </div>
+
+    <!-- كريو -->
+    <h3 class="section-title"><i class="fa-solid fa-person"></i> كريو</h3>
+    <div class="service-card">
+      <div class="sub-desc">جسم منحوت بدون جراحة</div>
+      <ul class="price-list">
+           <li class="price-item"><span>جلسة تنحيف</span><span class="price-tag">$30</span></li>
+        <li class="price-item"><span>جلسة تنحيف+(ميزو شحوم)</span><span class="price-tag">$60</span></li>
+        <li class="price-item"><span>جلسة تنحيف+(ليمون باتل)</span><span class="price-tag">$75</span></li>
+      </ul>
+    </div>
+
+    <!-- قسم الليزر -->
+    <h3 class="section-title"><i class="fa-solid fa-bolt"></i> قسم الليزر</h3>
+    <div class="service-card">
+      <div class="sub-desc">وداعاً للشعر غير المرغوب فيه تكنولوجيا متقدمة لبشرة ناعمة كالحرير نتائج تدوم طويلاً و جلسات مريحة</div>
+      <div class="laser-grid">
+        <div class="laser-box"><span>شارب+دقن</span><span class="price-tag">$3</span></div>
+        <div class="laser-box"><span>رقبة</span><span class="price-tag">$3</span></div>
+        <div class="laser-box"><span>اصابع</span><span class="price-tag">$3</span></div>
+        <div class="laser-box"><span>وجه كامل</span><span class="price-tag">$5</span></div>
+        <div class="laser-box"><span>بكيني</span><span class="price-tag">$5</span></div>
+        <div class="laser-box"><span>ابطين</span><span class="price-tag">$5</span></div>
+        <div class="laser-box"><span>صدر</span><span class="price-tag">$5</span></div>
+        <div class="laser-box"><span>بطن</span><span class="price-tag">$5</span></div>
+        <div class="laser-box"><span>ساعدين</span><span class="price-tag">$6</span></div>
+        <div class="laser-box"><span>ظهر</span><span class="price-tag">$7</span></div>
+        <div class="laser-box"><span>ساقين</span><span class="price-tag">$7</span></div>
+        <div class="laser-box"><span>يدين</span><span class="price-tag">$8</span></div>
+        <div class="laser-box"><span>فخذين</span><span class="price-tag">$9</span></div>
+        <div class="laser-box"><span>جسم جزئي</span><span class="price-tag">$40</span></div>
+        <div class="laser-box" style="grid-column: span 2; background: rgba(243, 207, 133, 0.15);">
+          <span style="font-weight: 600; color: #fff;">جسم كامل</span>
+          <span class="price-tag" style="font-size: 1rem;">$50</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- معلومات المركز والتواصل والموقع -->
+    <footer class="info-footer">
+      <div class="info-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>مدينة جاسم بجانب صالون كرام</span>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>حجوزات المركز: 0937395616</span>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-user-doctor"></i>
+        <span>عيادة الدكتورة: 0968982238</span>
+      </div>
+
+      <!-- زر موقع العيادة على الخرائط -->
+      <div style="margin-top: 15px;">
+        <a href="https://maps.app.goo.gl/8RtBMJE7vcHywd358" class="btn btn-maps" target="_blank">
+          <i class="fa-solid fa-map-location-dot"></i> عرض موقع المركز على خرائط Google
+        </a>
+      </div>
+
+      <p style="margin-top: 20px; font-size: 0.8rem; color: rgba(255,255,255,0.5);">
+        جميع الحقوق محفوظة © مركز ليا (Léa Beauty Clinic)
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- سكربت فتح وإغلاق الصورة (Lightbox Script) -->
+  <script>
+    const modal = document.getElementById('imageLightbox');
+    const modalImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('closeLightbox');
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+
+    galleryItems.forEach(img => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  </script>
+
+</body>
+  </html>
+  
